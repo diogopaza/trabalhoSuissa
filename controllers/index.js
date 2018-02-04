@@ -13,6 +13,12 @@ const create = ( req, res ) => {
   } )
 }
 
+
+const findByName = ( req, res) => {
+  res.end('estou no byname')
+
+}
+
 const find = ( req, res, query = {} ) => 
   Model.find( query, ( err, data ) => {
     if ( err ) return console.log( 'ERRO: ', err )
@@ -63,5 +69,6 @@ module.exports = {
   find,
   findOne,
   update,
-  remove 
+  remove,
+  findByName 
 }

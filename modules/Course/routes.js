@@ -7,6 +7,19 @@ router.get( '/', ( req, res, next ) =>
   Controller.find( req, res, {} )
 )
 
+router.get('/name', (req, res, next) => {
+  const myQuery = req.query
+  //res.json(myQuery)
+  Controller.findByName(req, res,myQuery)
+
+})
+
+router.get('/:id/populate', (req, res, next) => {
+  
+  Controller.populate(req, res)
+
+})
+
 router.get( '/:id', ( req, res, next ) => 
   Controller.findOne( req, res )
 )

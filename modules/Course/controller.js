@@ -2,6 +2,10 @@ const Model = require( './model' )
 
 const ACTIONS_PATH = './../../'
 const create = require( ACTIONS_PATH + 'actions/create' )( Model )
+const findByName = require ( ACTIONS_PATH + 'actions/findByName' )(  Model )
+const populate = require ( ACTIONS_PATH + 'actions/populate' )(  Model )
+
+
 
 const find = ( req, res, query = {} ) => 
   Model.find( query, ( err, data ) => {
@@ -53,5 +57,7 @@ module.exports = {
   find,
   findOne,
   update,
-  remove 
+  remove,
+  findByName,
+  populate 
 }

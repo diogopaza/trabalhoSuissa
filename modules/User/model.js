@@ -1,10 +1,16 @@
 const mongoose = require( 'mongoose' )
 
 const _schema = {
-  name: String,
-  age: Number
+  name: {
+    
+    type: String,
+    require : true,
+
+  },
+  type: String,
+  email: String,
 }
 const schema = new mongoose.Schema( _schema )
-const Model = mongoose.model( 'Pokemon', schema )
+const Model = mongoose.model( 'user', schema )
 
 module.exports = Model

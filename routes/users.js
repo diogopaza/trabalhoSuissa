@@ -7,6 +7,15 @@ router.get( '/', ( req, res, next ) =>
   Controller.find( req, res, {} )
 )
 
+router.get( '/name', ( req, res, next ) => 
+res.end('oii')
+//Controller.findByName( req, res, {} )
+)
+
+router.get( '/', ( req, res, next ) =>      
+Controller.find( req, res, {} )
+)
+
 router.get( '/:id', ( req, res, next ) => 
   Controller.findOne( req, res )
 )

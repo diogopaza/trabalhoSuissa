@@ -1,5 +1,6 @@
 const mongoose = require( 'mongoose' )
-const dbURI = 'mongodb://localhost/pos-alfa-2017'
+const dbURI = 'mongodb://localhost/pos-alfa-2017'      
+//pos-alfa-2017'
 mongoose.connect( dbURI )
 
 mongoose.connection.on( 'conncected', () => console.log( `Mongoose connected open to ${ dbURI }` ) )
