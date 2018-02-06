@@ -13,7 +13,15 @@ router.get( '/', ( req, res, next ) =>
 
 router.get('/name', (req, res, next) => {
   const myQuery = req.query
-  //res.json(myQuery)
+  const valuesQuery =  Object.values( myQuery ) 
+  console.log(valuesQuery)
+  console.log(valuesQuery.length)
+  if(valuesQuery.length > 1)
+    return res.status(400).send({error: 'invalid parameter' })
+
+
+   
+ 
   Controller.findByName(req, res,myQuery)
 
 })

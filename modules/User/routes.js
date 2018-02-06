@@ -14,7 +14,7 @@ router.get( '/', ( req, res, next ) =>
 router.get('/name', (req, res, next) => {
 
   const myQuery = req.query
-  //res.json(myQuery)
+  
   Controller.findByName(req, res,myQuery)
 
 })
